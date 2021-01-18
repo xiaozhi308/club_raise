@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box; */
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.big-box{
+
+    display: flex;
+    background-color: pink;
+}
+
+.big-box .first-box{
+    width: 30%;
+    background-color: plum;
+}
+
+.big-box .first-box div{
+    padding: 20px;
+    text-align: center;
+    margin: 10px;
+
+}
+
+.big-box .first-box div:hover{
+    background-color: blueviolet;
+}
+
+.big-box .second-box{
+    display: flex;
+    width: 70%;
+    height: 900px;
+    background-color: purple;
+    padding: 30px;
+}
+
+.big-box .second-box div{
+    width: 400px;
+    height: 300px;
+    background-color: rosybrown;
+    margin: 10px;
+}

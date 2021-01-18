@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>众筹服务</title>
+	<meta name="description" content="众筹服务"/>
+    <meta name="keywords" content="众筹服务" />
+	<!--处理样式-->
+	<link rel="stylesheet" type="text/css" href="static/css/reset.css">
+	<!--公共的CSS-->
+	<link rel="stylesheet" type="text/css" href="static/css/style.css">
+	<!--首页的CSS-->
+	<link rel="stylesheet" type="text/css" href="static/css/index.css">
+	<!--引入网页标题图标-->
+	<link rel="shortcut icon" type="image/x-icon" href="static/img/favicon.ico">
+	<!-- <link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_1632750_204xwxiwzht.css?1583918713" /> -->
+	<!-- usermain -->
+	<link rel="stylesheet" href="static/css/Usermain.css">
+	<link rel="stylesheet" href="static/css/bootstrap.css">
+	<!-- 图片轮播 -->
+	<style>
+	*{padding: 0px;margin: 0px;}
+	#flash{width:1200px;height: 535px;margin: 0px auto;position: relative;}
+	#flash #play{width:1200px;height: 535px;list-style: none;position:absolute;top:0px;left:0px;}
+	#flash #play li{display: none;position:absolute;top:0px;left:0px;}
+	#flash #play li img{float: left;}
+	#button{position: absolute;bottom:20px;left:470px;list-style: none;}
+	#button li{margin-left: 10px;float: left;}
+	#button li div{width:12px;height: 12px;background:#DDDDDD;border-radius: 6px;cursor: pointer;}
+	#prev{width:40px;height:63px;background:url(images/beijing.png) 0px 0px;position: absolute;top:205px;left:10px;z-index: 1000;}
+	#next{width:40px;height:63px;background:url(images/beijing.png) -40px 0px;position: absolute;top:205px;right:10px;z-index: 1000;}
+	#prev:hover{background:url(images/beijing.png) 0px -62px;}
+	#next:hover{background:url(images/beijing.png) -40px -62px;}
+	</style>
+	<script type="text/javascript" src="static/js/usermain/shuffling/script.js"></script>
+	<!-- 侧边栏 -->
+	<script type="text/javascript" src="static/js/usermain/sidebar/jquery.min.js"></script>
+	<!-- 顶部导航栏 -->
+	<script type="text/javascript" src="static/js/usermain/topnav/jquery.min.js"></script>
+	<script type="text/javascript" src="static/js/usermain/topnav/site.js"></script>
+	
+	
+</head>
+<body>
+<!-- logo -->
+<div class="page-nav">
+	<div class="container">
+		<a class="logo"></a>
+	</div>
+</div>
+<!--导航-->
+<div id="header">
+            <!-- 顶部导航栏的左边 -->
+            <ul id="nav">
+                <li><a href="#">首页</a>
+                  <ul>
+                    <li><a href="/root">管理者</a></li>
+                    <li><a href="#">Sub-menu Item 2</a></li>
+                    <li><a href="#">Sub-menu Item 3</a></li>
+                    <li><a href="#">Sub-menu Item 4</a></li>
+                  </ul>
+                </li>
+	             <li><a href="#">我的</a>
+                  <ul>
+                    <li><a href="#">任务管理</a></li>
+                    <li><a href="#">Sub-menu Item 2</a></li>
+                    <li><a href="#">Sub-menu Item 3</a></li>
+                    <li><a href="#">Sub-menu Item 4</a></li>
+                  </ul>
+                </li>
+				<!-- 顶部导航栏的右边 -->		
+				<div class="page-top">
+					<div class="top-gt">
+						<div class="login">
+							<a href="/login" class="download"  style="text-decoration: none;">登录</a>
+							<span>  | </span>
+							<a href="/join" style="text-decoration: none;">注册</a>
+							<span>  | </span>
+						</div>
+						</div>
+					</div>
+            </ul>
+        </div>
+<!--图片轮播-->	
+		<div id="flash">
+		    <div id="prev"></div>
+		    <div id="next"></div>
+			<ul id="play">
+			 	<li style="display: block;"><img src="static/images/1.jpg" alt="" /></li>
+			 	<li><img src="static/images/2.jpg" alt="" /></li>
+			 	<li><img src="static/images/3.jpg" alt="" /></li>
+			 	<li><img src="static/images/4.jpg" alt="" /></li>
+			 	<li><img src="static/images/5.jpg" alt="" /></li>
+			 	<li><img src="static/images/6.jpg" alt="" /></li>
+			 	<li><img src="static/images/7.jpg" alt="" /></li>
+			 	<li><img src="static/images/8.jpg" alt="" /></li>
+			 </ul>
+			 <ul id="button">
+			 	<li><div style="background: #A10000;"></div></li>
+			 	<li><div></div></li>
+			 	<li><div></div></li>
+			 	<li><div></div></li>
+			 	<li><div></div></li>
+			 	<li><div></div></li>
+			 	<li><div></div></li>
+			 	<li><div></div></li>
+			 </ul>
+		</div>		
+
+<!-- 大内容区-->
+<div class="idx-container">
+	<div class="container">
+		<div class="idx-title">
+			<input type="datetime-local"  value="2021-01-12T08:30" style="align-items: center;border: #8C8C8C 1px solid;"/>
+			<!-- <script>
+				  function getbegtime() {
+				            var today = new Date();
+				            var yyyy = today.getFullYear();
+				            var MM = today.getMonth() + 1;
+				            var dd = today.getDate();
+				            var hh = today.getHours();
+				            var mm = today.getMinutes();
+				            MM = checkTime(MM);
+				            dd = checkTime(dd);
+				            hh = checkTime(hh);
+				            mm = checkTime(mm);
+				            var time = yyyy + "-" + MM + "-" + dd + "T" + hh + ":" + mm;
+				var dateControl = document.querySelector("#begdate");
+				dateControl.value = time;
+			   function checkTime(i) {
+			                if (i < 10) {
+			                    i = "0" + i;
+			                }
+			                return i;
+			            }
+			</script> -->
+		</div>
+		<div class="idx-phone idx-box">
+		<div class="idx-leftadv">
+		<!-- 侧边栏-->
+		<div class="sideBar-left">
+			<ul class="body_left_list">
+			    <li>
+			        <label>
+			            <span>生活区</span>
+			            <i class="iconfont iconxiajiantou"></i>
+			            <a href="javascript:;"></a>
+			        </label>
+			        <ul>
+			            <li>
+			                <label>
+			                    <i class="iconfont iconYYGK"></i>
+			                    <span>美食旅行</span>
+			                    <i class="iconfont iconyoujiantou"></i>
+			                    <a href="javascript:;"></a>
+			                </label>
+			                <ul>
+			                    <li>
+			                        <label>
+			                            <span>美食</span>
+			                            <i class="iconfont iconyoujiantou"></i>
+			                            <a href="javascript:;"></a>
+			                        </label>
+			                    </li>
+			                    <li>
+			                        <label>
+			                            <span>交通</span>
+			                            <i class="iconfont iconyoujiantou"></i>
+			                            <a href="javascript:;"></a>
+			                        </label>
+			                    </li>
+			                    <li>
+			                        <label>
+			                            <span>拍摄</span>
+			                            <i class="iconfont iconyoujiantou"></i>
+			                            <a href="javascript:;"></a>
+			                        </label>
+			                    </li>
+			                </ul>
+			            </li>
+			            <li>
+			                <label>
+			                    <i class="iconfont iconYYGK"></i>
+			                    <span>理财购物</span>
+			                    <i class="iconfont iconyoujiantou"></i>
+			                    <a href="javascript:;"></a>
+			                </label>
+			                <ul>
+			                    <li>
+			                        <label>
+			                            <span>购物</span>
+			                            <i class="iconfont iconyoujiantou"></i>
+			                            <a href="javascript:;"></a>
+			                        </label>
+			                    </li>
+			                    <li>
+			                        <label>
+			                            <span>理财</span>
+			                            <i class="iconfont iconyoujiantou"></i>
+			                            <a href="javascript:;"></a>
+			                        </label>
+			                    </li>
+			                    <li>
+			                        <label>
+			                            <span>支付</span>
+			                            <i class="iconfont iconyoujiantou"></i>
+			                            <a href="javascript:;"></a>
+			                        </label>
+			                    </li>
+			                </ul>
+			            </li>
+			            <li>
+			                <label>
+			                    <i class="iconfont iconYYGK"></i>
+			                    <span>医疗健康</span>
+			                    <i class="iconfont iconyoujiantou"></i>
+			                    <a href="javascript:;"></a>
+			                </label>
+			                <ul>
+			                    <li>
+			                        <label>
+			                            <span>运动健身</span>
+			                            <i class="iconfont iconyoujiantou"></i>
+			                            <a href="javascript:;"></a>
+			                        </label>
+			                    </li>
+			                    <li>
+			                        <label>
+			                            <span>医疗</span>
+			                            <i class="iconfont iconyoujiantou"></i>
+			                            <a href="javascript:;"></a>
+			                        </label>
+			                    </li>
+			                    <li>
+			                
+			                    </li>
+			                </ul>
+			            </li>
+			        </ul>
+			    </li>
+			    <li>
+			        <label>
+			            <span>娱乐区</span>
+			            <i class="iconfont iconxiajiantou"></i>
+			            <a href="javascript:;"></a>
+			        </label>
+			        <ul>
+			            <li>
+			                <label>
+			                    <i class="iconfont iconYYGK"></i>
+			                    <span>游戏</span>
+			                    <i class="iconfont iconyoujiantou"></i>
+			                    <a href="javascript:;"></a>
+			                </label>
+			            <!--    <ul>
+			                    <li>
+			                        <label>
+			                            <span>三级栏目</span>
+			                            <i class="iconfont iconyoujiantou"></i>
+			                            <a href="javascript:;"></a>
+			                        </label>
+			                    </li>
+			                    <li>
+			                        <label>
+			                            <span>三级栏目</span>
+			                            <i class="iconfont iconyoujiantou"></i>
+			                            <a href="javascript:;"></a>
+			                        </label>
+			                    </li>
+			                    <li>
+			                        <label>
+			                            <span>三级栏目</span>
+			                            <i class="iconfont iconyoujiantou"></i>
+			                            <a href="javascript:;"></a>
+			                        </label>
+			                    </li>
+			                </ul> -->
+			            </li>
+			            <li>
+			                <label>
+			                    <i class="iconfont iconYYGK"></i>
+			                    <span>社交</span>
+			                    <i class="iconfont iconyoujiantou"></i>
+			                    <a href="javascript:;"></a>
+			                </label>
+			            <!--    <ul>
+			                    <li>
+			                        <label>
+			                            <span>三级栏目</span>
+			                            <i class="iconfont iconyoujiantou"></i>
+			                            <a href="javascript:;"></a>
+			                        </label>
+			                    </li>
+			                    <li>
+			                        <label>
+			                            <span>三级栏目</span>
+			                            <i class="iconfont iconyoujiantou"></i>
+			                            <a href="javascript:;"></a>
+			                        </label>
+			                    </li>
+			                    <li>
+			                        <label>
+			                            <span>三级栏目</span>
+			                            <i class="iconfont iconyoujiantou"></i>
+			                            <a href="javascript:;"></a>
+			                        </label>
+			                    </li>
+			                </ul> -->
+			            </li>
+			            <li>
+			                <label>
+			                    <i class="iconfont iconYYGK"></i>
+			                    <span>其他</span>
+			                    <i class="iconfont iconyoujiantou"></i>
+			                    <a href="javascript:;"></a>
+			                </label>
+			                <ul>
+			                    <li>
+			                        <label>
+			                            <span>音乐区</span>
+			                            <i class="iconfont iconyoujiantou"></i>
+			                            <a href="javascript:;"></a>
+			                        </label>
+			                    </li>
+			                    <li>
+			                        <label>
+			                            <span>阅读</span>
+			                            <i class="iconfont iconyoujiantou"></i>
+			                            <a href="javascript:;"></a>
+			                        </label>
+			                    </li>
+			                    <li>
+			                        <label>
+			                            <span>其他</span>
+			                            <i class="iconfont iconyoujiantou"></i>
+			                            <a href="javascript:;"></a>
+			                        </label>
+			                    </li>
+			                </ul>
+			            </li>
+			        </ul>
+			    </li>
+			    <li>
+			        <label>
+			            <span>工作区</span>
+			            <i class="iconfont iconxiajiantou"></i>
+			            <a href="javascript:;"></a>
+			        </label>
+			        <ul>
+			            <li>
+			                <label>
+			                    <i class="iconfont iconYYGK"></i>
+			                    <span>实用工具</span>
+			                    <i class="iconfont iconyoujiantou"></i>
+			                    <a href="javascript:;"></a>
+			                </label>
+			                <ul>
+			                    <li>
+			                        <label>
+			                            <span>浏览器</span>
+			                            <i class="iconfont iconyoujiantou"></i>
+			                            <a href="javascript:;"></a>
+			                        </label>
+			                    </li>
+			                    <li>
+			                        <label>
+			                            <span>输入法</span>
+			                            <i class="iconfont iconyoujiantou"></i>
+			                            <a href="javascript:;"></a>
+			                        </label>
+			                    </li>
+			                    <li>
+			                        <label>
+			                            <span>其他小工具</span>
+			                            <i class="iconfont iconyoujiantou"></i>
+			                            <a href="javascript:;"></a>
+			                        </label>
+			                    </li>
+			                </ul>
+			            </li>
+			            <li>
+			                <label>
+			                    <i class="iconfont iconYYGK"></i>
+			                    <span>办公软件</span>
+			                    <i class="iconfont iconyoujiantou"></i>
+			                    <a href="javascript:;"></a>
+			                </label>
+			                <ul>
+			                    <li>
+			                        <label>
+			                            <span>笔记存储</span>
+			                            <i class="iconfont iconyoujiantou"></i>
+			                            <a href="javascript:;"></a>
+			                        </label>
+			                    </li>
+			                    <li>
+			                        <label>
+			                            <span>邮箱</span>
+			                            <i class="iconfont iconyoujiantou"></i>
+			                            <a href="javascript:;"></a>
+			                        </label>
+			                    </li>
+			                    <li>
+			                        <label>
+			                            <span>办公文档</span>
+			                            <i class="iconfont iconyoujiantou"></i>
+			                            <a href="javascript:;"></a>
+			                        </label>
+			                    </li>
+			                </ul>
+			            </li>
+			            <li>
+			                <label>
+			                    <i class="iconfont iconYYGK"></i>
+			                    <span>其他</span>
+			                    <i class="iconfont iconyoujiantou"></i>
+			                    <a href="javascript:;"></a>
+			                </label>
+			                <ul>
+			                    <li>
+			                        <label>
+			                            <span>三级栏目</span>
+			                            <i class="iconfont iconyoujiantou"></i>
+			                            <a href="javascript:;"></a>
+			                        </label>
+			                    </li>
+			                    <li>
+			                        <label>
+			                            <span>三级栏目</span>
+			                            <i class="iconfont iconyoujiantou"></i>
+			                            <a href="javascript:;"></a>
+			                        </label>
+			                    </li>
+			                    <li>
+			                        <label>
+			                            <span>三级栏目</span>
+			                            <i class="iconfont iconyoujiantou"></i>
+			                            <a href="javascript:;"></a>
+			                        </label>
+			                    </li>
+			                </ul>
+			            </li>
+			        </ul>
+			    </li>
+			</ul>			
+		</div>
+		</div>	
+		<div class="idx-rightadv">
+			<div class="good-box col-5">
+					<div class="phoneli col-5">
+						<img src="static/img/phone1.png">
+						<h3>小米10 青春版 5G</h3>
+						<p>50倍潜望式变焦/轻薄5G手机</p>
+						<span>2099元起</span>
+					</div>
+					<div class="phoneli">
+						<img src="static/img/phone1.png">
+						<h3>小米10 青春版 5G</h3>
+						<p>50倍潜望式变焦/轻薄5G手机</p>
+						<span>2099元起</span>
+					</div>	
+					<div class="phoneli">
+						<img src="static/img/phone1.png">
+						<h3>小米10 青春版 5G</h3>
+						<p>50倍潜望式变焦/轻薄5G手机</p>
+						<span>2099元起</span>
+					</div>	
+					<div class="phoneli">
+						<img src="static/img/phone1.png">
+						<h3>小米10 青春版 5G</h3>
+						<p>50倍潜望式变焦/轻薄5G手机</p>
+						<span>2099元起</span>
+					</div>
+					<div class="phoneli col-5">
+						<img src="static/img/phone1.png">
+						<h3>小米10 青春版 5G</h3>
+						<p>50倍潜望式变焦/轻薄5G手机</p>
+						<span>2099元起</span>
+					</div>
+					<div class="phoneli col-5">
+						<img src="static/img/phone1.png">
+						<h3>小米10 青春版 5G</h3>
+						<p>50倍潜望式变焦/轻薄5G手机</p>
+						<span>2099元起</span>
+					</div>			
+			</div>
+		</div>
+	</div>
+</div>
+<br>
+<br>
+<br>
+<!--广告图 -->
+<div class="idx-adv container">
+	<a href=""><img src="static/img/adv4.png"></a>
+</div>
+</div>
+<script type="text/javascript" src="static/js/usermain/sidebar/script.js"></script>
+</body>
+
+</html>
+
+
+
+

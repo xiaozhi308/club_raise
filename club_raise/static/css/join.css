@@ -1,0 +1,85 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(#141e30, #243b55);
+}
+
+.join{
+    flex-direction: column;
+    width: 450px;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+}
+
+.join h2{
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.join .join_box{
+    position: relative;
+    width: 100%;
+}
+
+.join .join_box input{
+    outline: none;
+    border: none;
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 30px;
+    color: #fff;
+    font-size: 16px;
+    border-bottom: 1px solid #fff;
+    background-color: transparent;
+}
+
+.join .join_box label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    color: #fff;
+    pointer-events: none;
+    transition: all 0.5s;
+}
+
+.join .join_box input:focus + label,
+.join .join_box input:valid + label{
+    top: -20px;
+    color: #03e9f4;
+    font-size: 12px;
+}
+
+.join a{
+    color: #03e9f4;
+    text-decoration: none;
+    transition: all 0.5s;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.join a:hover{
+    color: #fff;
+    border-radius: 5px;
+    background-color: #03e9f4;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
+}
+
+.join .join_return{
+    text-align: center;
+    margin-top: 10px;
+}
