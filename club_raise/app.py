@@ -7,18 +7,21 @@ app = Flask(__name__)
 def usermain():
     return render_template('usermain.html')
 
-
-@app.route("/login")
+@app.route("/userlogin")
 def login():
-    return render_template('loginmax.html')
+    return render_template('userlogin.html')
 
-@app.route("/join")
+@app.route("/rootlogin")
 def join():
-    return render_template('join.html')
+    return render_template('rootlogin.html')
+
+@app.route("/registered")
+def registered():
+    return render_template('registered.html')
 
 @app.route("/root")
 def root():
-    return render_template('root.html')
+    return render_template('rootmain.html')
 
 
 if __name__ == '__main__':
