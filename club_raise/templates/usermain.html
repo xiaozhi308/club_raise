@@ -20,15 +20,15 @@
 	<!-- 图片轮播 -->
 	<style>
 	*{padding: 0px;margin: 0px;}
-	#flash{width:1200px;height: 535px;margin: 30px auto;position: relative;}
+	#flash{width:1200px;height: 535px;margin: 0px auto;position: relative;}
 	#flash #play{width:1200px;height: 535px;list-style: none;position:absolute;top:0px;left:0px;}
 	#flash #play li{display: none;position:absolute;top:0px;left:0px;}
 	#flash #play li img{float: left;}
 	#button{position: absolute;bottom:20px;left:470px;list-style: none;}
 	#button li{margin-left: 10px;float: left;}
 	#button li div{width:12px;height: 12px;background:#DDDDDD;border-radius: 6px;cursor: pointer;}
-	#prev{width:40px;height:63px;background:url(static/images/beijing.png) 0px 0px;position: absolute;top:205px;left:10px;z-index: 1000;}
-	#next{width:40px;height:63px;background:url(static/images/beijing.png) -40px 0px;position: absolute;top:205px;right:10px;z-index: 1000;}
+	#prev{width:40px;height:63px;background:url(images/beijing.png) 0px 0px;position: absolute;top:205px;left:10px;z-index: 1000;}
+	#next{width:40px;height:63px;background:url(images/beijing.png) -40px 0px;position: absolute;top:205px;right:10px;z-index: 1000;}
 	#prev:hover{background:url(images/beijing.png) 0px -62px;}
 	#next:hover{background:url(images/beijing.png) -40px -62px;}
 	</style>
@@ -37,73 +37,50 @@
 	<script type="text/javascript" src="static/js/usermain/sidebar/jquery.min.js"></script>
 	<!-- 顶部导航栏 -->
 	<script type="text/javascript" src="static/js/usermain/topnav/jquery.min.js"></script>
-	<script type="text/javascript" src="static/js/usermain/topnav/yyui.js"></script>
+	<script type="text/javascript" src="static/js/usermain/topnav/site.js"></script>
+	
+	
 </head>
 <body>
 <!-- logo -->
 <div class="page-nav">
-	<!--<div class="container">-->
-		<!--<a class="logo"></a>-->
-	<!--</div>-->
+	<div class="container">
+		<a class="logo"></a>
+	</div>
 </div>
-<!--顶部导航-->
-<script type="text/javascript">yyui_menu('.yyui_menu1');</script>
-<link rel="stylesheet" type="text/css" href="static/css/usermaintopnav.css">
-	<ul class="yyui_menu1">
-	  <li><a href="#">首页</a>
-		<ul class="one">
-		  <li><a href="/rootlogin">管理员</a></li>
-		</ul>
-	  </li>
-	  <li><a href="#">任务管理</a>
-		<ul class="one">
-		  <li><a href="#">已发布</a></li>
-		  <li><a href="#">未发布</a></li>
-		  <!--<li><a href="#" class="more">菜单三</a>-->
-			<!--<ul class="two">-->
-			  <!--<li><a href="#">菜单一</a></li>-->
-			  <!--<li><a href="#">菜单二</a></li>-->
-			  <!--<li><a href="#" class="more">菜单三</a>-->
-				<!--<ul class="three">-->
-				  <!--<li><a href="#">菜单一</a></li>-->
-				  <!--<li><a href="#">菜单二</a></li>-->
-				  <!--<li><a href="#">菜单三</a></li>-->
-				  <!--<li><a href="#">菜单四</a></li>-->
-				  <!--<li><a href="#">菜单五</a></li>-->
-				<!--</ul>-->
-			  <!--</li>-->
-			  <!--<li><a href="#">菜单四</a></li>-->
-			<!--</ul>-->
-		  <!--</li>-->
-		</ul>
-	  </li>
-	  <li><a href="#">我的</a>
-			<ul class="one">
-			  <li><a href="#">我的打赏</a></li>
-			  <li><a href="#">我的收藏</a></li>
-			</ul>
-		  </li>
-	<!-- 顶部导航栏的右边 -->
-		<div class="page-top">
-			<div class="top-gt">
-				<div class="login">
-					{% if login_user %}
-					<li><a href="#">{{ login_user }}</a></li>
-					<li><a href="{{ url_for('logout') }}">注销</a></li>
-					{% else %}
-					<li><a href="{{ url_for('userlogin') }}">登录</a></li>
-					<li><a href="{{ url_for('userre') }}">注册</a></li>
-					{% endif %}
-<!--					<a href="/userlogin" class="download"  style="text-decoration: none;">⛄ </a>-->
-<!--					<span>  | </span>-->
-<!--					<a href="/regis" style="text-decoration: none;">🚩</a>-->
-<!--					<span>  | </span>-->
-<!--					<a href="/userlogin"   style="text-decoration: none;color: #F5F5F5;"> ￥</a>-->
-					<span>  | </span>
-				</div>
-				</div>
-		</div>
-	</ul>
+<!--导航-->
+<div id="header">
+            <!-- 顶部导航栏的左边 -->
+            <ul id="nav">
+                <li><a href="#">首页</a>
+                  <ul>
+                    <li><a href="/root">管理者</a></li>
+                    <li><a href="#">Sub-menu Item 2</a></li>
+                    <li><a href="#">Sub-menu Item 3</a></li>
+                    <li><a href="#">Sub-menu Item 4</a></li>
+                  </ul>
+                </li>
+	             <li><a href="#">我的</a>
+                  <ul>
+                    <li><a href="#">任务管理</a></li>
+                    <li><a href="#">Sub-menu Item 2</a></li>
+                    <li><a href="#">Sub-menu Item 3</a></li>
+                    <li><a href="#">Sub-menu Item 4</a></li>
+                  </ul>
+                </li>
+				<!-- 顶部导航栏的右边 -->		
+				<div class="page-top">
+					<div class="top-gt">
+						<div class="login">
+							<a href="/login" class="download"  style="text-decoration: none;">登录</a>
+							<span>  | </span>
+							<a href="/join" style="text-decoration: none;">注册</a>
+							<span>  | </span>
+						</div>
+						</div>
+					</div>
+            </ul>
+        </div>
 <!--图片轮播-->	
 		<div id="flash">
 		    <div id="prev"></div>
