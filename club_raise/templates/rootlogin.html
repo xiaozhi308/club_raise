@@ -7,18 +7,20 @@
     <link rel="stylesheet" href="static/css/loginmax.css">
 </head>
 <body>
+<form action="rootloginre" method="POST">
     <div class="login">
         <h2>管理员登录</h2>
         <div class="login_box">
             <!--required:不能位空-->
-            <input type="text" required="required">
+            <input type="text" required="required" name="rootname">
             <label>用户名</label></div>
         <div class="login_box">
-            <input type="password" required="required">
+            <input type="password" required="required" name="rootpasswd">
             <label>密码</label></div>
         <div class="login_join">
             <a href="/root">登录</a>
             <a href="/">返回</a></div>
     </div>
+    </form>
 </body>
 </html>

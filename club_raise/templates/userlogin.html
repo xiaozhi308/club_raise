@@ -7,18 +7,21 @@
     <link rel="stylesheet" href="static/css/loginmax.css">
 </head>
 <body>
+<form action="/loginma" method="POST">
     <div class="login">
         <h2>用户登录</h2>
         <div class="login_box">
             <!--required:不能位空-->
-            <input type="text" required="required">
+            <input type="text" required="required" name="username">
             <label>用户名</label></div>
         <div class="login_box">
-            <input type="password" required="required">
+            <input type="password" required="required" name="userpasswd">
             <label>密码</label></div>
         <div class="login_join">
-            <a href="/">登录</a>
+           <button >登录</button>
+
             <a href="/">返回</a></div>
     </div>
+    </form>
 </body>
 </html>
